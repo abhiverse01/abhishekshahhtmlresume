@@ -1,0 +1,137 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cover-image {
+    width: 100%;
+    height: 200px;
+    background-image: url('cover-placeholder.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header h1 {
+    margin-top: 100px;
+    font-size: 2em;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact-info p,
+.contact-info a {
+    margin: 0;
+    color: #333;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.section-content ul {
+    padding-left: 20px;
+}
+
+.section-content ul li {
+    margin-bottom: 10px;
+}
+
+.experience, .projects, .extra-curricular, .leadership, .objective, .education, .skills {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 15px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+
+.extra-curricular ul, .leadership ul {
+    list-style-type: disc; /* Ensure bullets are shown */
+    padding-left: 20px; /* Ensure proper indentation */
+}
+
+.extra-curricular ul li, .leadership ul li {
+    margin-bottom: 10px;
+}
+
+.extra-curricular ul li a, .leadership ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.extra-curricular ul li a:hover, .leadership ul li a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 0.75rem; /* Small font size */
+    color: #777; /* Light gray color for the text */
+    margin-top: 2rem; /* Adds space above the footer */
+    padding: 1rem; /* Adds padding around the footer text */
+    border-top: 1px solid #ddd; /* Adds a top border for separation */
+}
+
+
+

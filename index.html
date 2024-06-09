@@ -7,42 +7,69 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
+            max-width: 900px;
+            margin: 20px auto;
             padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3, h4, h5, h6 {
-            margin: 0;
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #2c3e50;
         }
         .contact-info {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
         }
         .section {
             margin-bottom: 20px;
         }
         .section-title {
-            background-color: #f0f0f0;
+            background-color: #3498db;
+            color: #fff;
             padding: 10px;
+            margin: -20px -20px 10px -20px;
+            font-size: 1.5em;
         }
         .section-content {
             padding: 10px;
         }
-        .experience, .education, .projects, .skills, .extra-curricular, .leadership {
-            margin-bottom: 10px;
+        .section-content p, .section-content ul {
+            margin: 0 0 10px 0;
+            line-height: 1.6;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .section-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
         }
-        ul li {
+        .section-content ul li {
             margin-bottom: 5px;
+        }
+        .skills p, .experience p {
+            font-weight: bold;
+        }
+        .skills ul, .experience ul {
+            margin-left: 20px;
+        }
+        .skills ul li, .experience ul li {
+            font-weight: normal;
         }
     </style>
 </head>
@@ -63,7 +90,7 @@
         
         <div class="section">
             <div class="section-title">
-                <h2>Objective</h2>
+                Objective
             </div>
             <div class="section-content">
                 <p>Software Engineer with 2+ years of experience in Machine Learning, LLMs, Data Science, and Python Full Stack Development as a Freelancer seeking full-time ML Engineer roles.</p>
@@ -72,32 +99,38 @@
         
         <div class="section">
             <div class="section-title">
-                <h2>Education</h2>
+                Education
             </div>
             <div class="section-content education">
-                <p><strong>Bachelor's of Computer Science</strong> - Tribhuvan University (2020 - 2024)</p>
+                <p>Bachelor's of Computer Science - Tribhuvan University (2020 - 2024)</p>
                 <p>Relevant Coursework: Data Mining, Microprocessor, Object Oriented Programming and Design, Artificial Intelligence and Theory of Computation.</p>
-                <p><strong>Secondary Education</strong> - Model Secondary School (2017 - 2019)</p>
+                <p>Secondary Education - Model Secondary School (2017 - 2019)</p>
             </div>
         </div>
         
         <div class="section">
             <div class="section-title">
-                <h2>Skills</h2>
+                Skills
             </div>
             <div class="section-content skills">
-                <p><strong>Technical Skills:</strong> Python, Javascript, AI/ML, NLP, Data Science, OpenCV, Deep Learning, Flask, SQL</p>
-                <p><strong>Soft Skills:</strong> Project Leader, Writing and Communication, Content Development</p>
+                <p>Technical Skills:</p>
+                <ul>
+                    <li>Python, Javascript, AI/ML, NLP, Data Science, OpenCV, Deep Learning, Flask, SQL</li>
+                </ul>
+                <p>Soft Skills:</p>
+                <ul>
+                    <li>Project Leader, Writing and Communication, Content Development</li>
+                </ul>
             </div>
         </div>
         
         <div class="section">
             <div class="section-title">
-                <h2>Experience</h2>
+                Experience
             </div>
             <div class="section-content experience">
                 <div>
-                    <p><strong>ML Researcher/Research Writer</strong> (Jan 2019 - 2024)</p>
+                    <p>ML Researcher/Research Writer (Jan 2019 - 2024)</p>
                     <p>Freelance, Dharan, Nepal</p>
                     <ul>
                         <li>Researched and worked on the paper, "Nepali Music Genre Classification" to assist my mentor studying M.Sc abroad.</li>
@@ -105,7 +138,7 @@
                     </ul>
                 </div>
                 <div>
-                    <p><strong>ML Engineer</strong> (Jan 2019 - 2024)</p>
+                    <p>ML Engineer (Jan 2019 - 2024)</p>
                     <p>Freelance, Kathmandu, Nepal</p>
                     <ul>
                         <li>Independently worked on several ML and LLMs Projects.</li>
@@ -114,7 +147,7 @@
                     </ul>
                 </div>
                 <div>
-                    <p><strong>ML Intern</strong> (Oct 2023 - Nov 2023)</p>
+                    <p>ML Intern (Oct 2023 - Nov 2023)</p>
                     <p>Codsoft, Bangalore, India</p>
                     <ul>
                         <li>Developed a machine learning model to identify fraudulent credit card transactions using Logistic Regression and Random Forest, addressing imbalanced data with SMOTE.</li>
@@ -124,14 +157,14 @@
                     </ul>
                 </div>
                 <div>
-                    <p><strong>ML Sub-Mentor</strong> (Oct 2023)</p>
+                    <p>ML Sub-Mentor (Oct 2023)</p>
                     <p>ACES, Dharan, Nepal</p>
                     <ul>
                         <li>Worked as a sub-mentor in the one-week-long ML training camp conducted by ACES during my engineering study days. Helped the main mentor and the attendees to understand ML concepts, errors and possible improvements.</li>
                     </ul>
                 </div>
                 <div>
-                    <p><strong>Python Developer</strong> (2019 - 2024)</p>
+                    <p>Python Developer (2019 - 2024)</p>
                     <p>Freelance, Nepal</p>
                     <ul>
                         <li>Developed and contributed to several group and solo projects, demonstrating strong Python proficiency.</li>
@@ -148,7 +181,7 @@
         
         <div class="section">
             <div class="section-title">
-                <h2>Projects</h2>
+                Projects
             </div>
             <div class="section-content projects">
                 <ul>
@@ -161,7 +194,7 @@
         
         <div class="section">
             <div class="section-title">
-                <h2>Extra-Curricular Activities</h2>
+                Extra-Curricular Activities
             </div>
             <div class="section-content extra-curricular">
                 <ul>
@@ -176,7 +209,7 @@
         
         <div class="section">
             <div class="section-title">
-                <h2>Leadership</h2>
+                Leadership
             </div>
             <div class="section-content leadership">
                 <ul>

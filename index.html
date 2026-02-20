@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Shah's Resume</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome (ADDED: Required for phone/map icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,28 +15,42 @@
         <header class="header">
             <div class="cover-image">
                 <div class="profile-image">
-                    <img src="assets/profile-placeholder.png" alt="Profile Image">
+                    <!-- Added fallback alt text and object-fit class in CSS -->
+                    <img src="assets/profile-placeholder.png" alt="Abhishek Shah Profile">
                 </div>
             </div>
             <h1>Abhishek Shah</h1>
-            <h3>ML Engineer - AIE | ML-Ops | python Stack | mongoDB | tableau | LLMs</h3>
+            <!-- Converted H3 to a subtitle span for better semantic structure -->
+            <div class="subtitle">ML Engineer - AIE | ML-Ops | Python Stack | MongoDB | Tableau | LLMs</div>
         </header>
 
         <div class="contact-info">
-            <div>
+            <!-- Left side: Location & Phone -->
+            <div class="contact-details">
                 <p><i class="fas fa-phone"></i> +977(981) 587-3277</p>
                 <p><i class="fas fa-map-marker-alt"></i> Janakpur, Nepal</p>
-                
             </div>
             
-            <div>
-                <p><a href="mailto:www.abhishekshah007@gmail.com"><img src="assets/gmail.png" alt="Email" style="width:30px; height:30px;"></a></p>
-                <p><a href="https://linkedin.com/in/theabhishekshah"><img src="assets/linkedin-icion.png" alt="LinkedIn" style="width:30px; height:30px;"></a></p>
-                <p><a href="http://www.abhishekshah.vercel.app"><img src="assets/portfolio.png" alt="Portfolio" style="width:30px; height:30px;"></a></p>
-                <p><a href="https://www.facebook.com/1lord001"><img src="assets/facebook.gif" alt="Facebook" style="width:30px; height:30px;"></a></p>
-                <p><a href="https://www.github.com/abhiverse01"><img src="assets/github.gif" alt="GitHub" style="width:30px; height:30px;"></a></p>
-                <p><a href="https://www.instagram.com/i_abhiverse"><img src="assets/instagram.gif" alt="Instagram" style="width:30px; height:30px;"></a></p>
-
+            <!-- Right side: Social Icons (Fixed Layout) -->
+            <div class="social-links">
+                <a href="mailto:www.abhishekshah007@gmail.com" title="Email">
+                    <img src="assets/gmail.png" alt="Email">
+                </a>
+                <a href="https://linkedin.com/in/theabhishekshah" target="_blank" title="LinkedIn">
+                    <img src="assets/linkedin-icion.png" alt="LinkedIn">
+                </a>
+                <a href="http://www.abhishekshah.vercel.app" target="_blank" title="Portfolio">
+                    <img src="assets/portfolio.png" alt="Portfolio">
+                </a>
+                <a href="https://www.facebook.com/1lord001" target="_blank" title="Facebook">
+                    <img src="assets/facebook.gif" alt="Facebook">
+                </a>
+                <a href="https://www.github.com/abhiverse01" target="_blank" title="GitHub">
+                    <img src="assets/github.gif" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/i_abhiverse" target="_blank" title="Instagram">
+                    <img src="assets/instagram.gif" alt="Instagram">
+                </a>
             </div>
         </div>
 
@@ -47,32 +64,40 @@
         <div class="section">
             <div class="section-title">Education</div>
             <div class="section-content education">
-                <p>Bachelor's of Computer Science Engineering (CSE) - Tribhuvan University (2020 - 2024)</p>
-                <p>Relevant Coursework: Data Mining, Microprocessor, Object Oriented Programming and Design, Artificial Intelligence and Theory of Computation.</p>
-                <p>Secondary Education - Model Secondary School (2017 - 2019)</p>
+                <div class="edu-item">
+                    <p><strong>Bachelor's of Computer Science Engineering (CSE)</strong> - Tribhuvan University (2020 - 2024)</p>
+                    <p class="coursework"><em>Relevant Coursework:</em> Data Mining, Microprocessor, Object Oriented Programming and Design, Artificial Intelligence and Theory of Computation.</p>
+                </div>
+                <div class="edu-item">
+                    <p><strong>Secondary Education</strong> - Model Secondary School (2017 - 2019)</p>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">Skills</div>
             <div class="section-content skills">
-                <p><b>Technical Skills:</b></p>
-                <ul>
-                    <li>  Python, Javascript, AI/ML, NLP, Data Science, OpenCV, RecSys, Deep Learning, Flask, SQL, Docker, Kafka, System Design, Microservice Architectures</li>
-                </ul>
-                <p><b>Soft Skills:</b></p>
-                <ul>
-                    <li>  Project Leader, Writing and Communication, Content Development</li>
-                </ul>
+                <div class="skill-group">
+                    <p><b>Technical Skills:</b></p>
+                    <p class="skill-tags">Python, Javascript, AI/ML, NLP, Data Science, OpenCV, RecSys, Deep Learning, Flask, SQL, Docker, Kafka, System Design, Microservice Architectures</p>
+                </div>
+                <div class="skill-group">
+                    <p><b>Soft Skills:</b></p>
+                    <p>Project Leader, Writing and Communication, Content Development</p>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">Experience</div>
             <div class="section-content experience">
-                <div>
-                    <p><b>AIE - Artificial Intelligence Engineer & AI Team Lead </b> (Jun 2024 - Now)</p>
-                    <p>Inflancer Technology, Gwarko, Kathmandu, Nepal</p>
+                <!-- Experience Item 1 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>AIE - Artificial Intelligence Engineer & AI Team Lead</h4>
+                        <span class="exp-date">Jun 2024 - Present</span>
+                    </div>
+                    <p class="exp-company">Inflancer Technology, Gwarko, Kathmandu, Nepal</p>
                     <ul>
                         <li><b>Recommender Systems:</b> Developed and deployed advanced Recommender Systems (RS) to boost user engagement through personalized content.</li>
                         <li><b>Intelligent Search:</b> Implemented intelligent search features using NLP to enhance content discovery.</li>
@@ -81,56 +106,72 @@
                         <li><b>Technical Expertise:</b> Skilled in Python, Apache Kafka, MongoDB, LLMs, and Neural Networks for real-time systems.</li>
                     </ul>
                 </div>
-                <hr>
-                <div>
-                    <p><b>ML Researcher/Research Writer </b> (Jan 2019 - 2024)</p>
-                    <p>Freelance, Dharan, Nepal</p>
+
+                <!-- Experience Item 2 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Researcher / Research Writer</h4>
+                        <span class="exp-date">Jan 2019 - 2024</span>
+                    </div>
+                    <p class="exp-company">Freelance, Dharan, Nepal</p>
                     <ul>
                         <li>Researched and worked on the "Nepali Music Genre Classification" paper to assist my mentor in studying M.Sc abroad.</li>
                         <li>Researched and worked on the "Multi-modal Hate Speech Detection using Deep Learning" paper to assist my mentor studying M.Sc. abroad.</li>
                     </ul>
                 </div>
-                <hr>
-                <div>
-                    <p><b>ML Engineer</b> (Jan 2019 - 2024)</p>
-                    <p>Freelance, Kathmandu, Nepal</p>
+
+                <!-- Experience Item 3 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Engineer</h4>
+                        <span class="exp-date">Jan 2019 - 2024</span>
+                    </div>
+                    <p class="exp-company">Freelance, Kathmandu, Nepal</p>
                     <ul>
                         <li>Independently worked on several ML and LLMs Projects.</li>
                         <li>Created a Python code generator by Fine-tuning a Llama-2 Model on the custom collected code/description dataset.</li>
                         <li>Working on a hand gesture recognition project using OpenCV and deploying it using Vercel.</li>
                     </ul>
                 </div>
-                <hr>
-                <div>
-                    <p><b>ML Intern</b> (Oct 2023 - Nov 2023)</p>
-                    <p>Codsoft, Bangalore, India</p>
+
+                <!-- Experience Item 4 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Intern</h4>
+                        <span class="exp-date">Oct 2023 - Nov 2023</span>
+                    </div>
+                    <p class="exp-company">Codsoft, Bangalore, India</p>
                     <ul>
                         <li>Developed a machine learning model to identify fraudulent credit card transactions using Logistic Regression and Random Forest, addressing imbalanced data with SMOTE.</li>
-                        <li>Predicted customer churn with Random Forest achieving 86.55 percent accuracy, employing data cleaning, normalization, feature engineering, and hyperparameter tuning.</li>
-                        <li>Implemented NLP techniques for movie genre prediction, optimizing Logistic Regression to achieve 57.87 percent accuracy, and created an interactive interface for practical application.</li>
-                        <li>Created an SVM model for SMS spam detection, achieving 98 percent accuracy, with extensive preprocessing and conversion of sparse to dense matrix formats.</li>
+                        <li>Predicted customer churn with Random Forest achieving 86.55% accuracy, employing data cleaning, normalization, feature engineering, and hyperparameter tuning.</li>
+                        <li>Implemented NLP techniques for movie genre prediction, optimizing Logistic Regression to achieve 57.87% accuracy.</li>
+                        <li>Created an SVM model for SMS spam detection, achieving 98% accuracy, with extensive preprocessing.</li>
                     </ul>
                 </div>
-                <hr>
-                <div>
-                    <p><b>ML Sub-Mentor</b> (Oct 2023)</p>
-                    <p>ACES, Dharan, Nepal</p>
+
+                <!-- Experience Item 5 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Sub-Mentor</h4>
+                        <span class="exp-date">Oct 2023</span>
+                    </div>
+                    <p class="exp-company">ACES, Dharan, Nepal</p>
                     <ul>
-                        <li>Worked as a sub-mentor in the one-week-long ML training camp conducted by ACES during my engineering study days. Helped the main mentor and the attendees to understand ML concepts, errors and possible improvements.</li>
+                        <li>Worked as a sub-mentor in a one-week-long ML training camp. Helped attendees understand ML concepts, errors, and possible improvements.</li>
                     </ul>
                 </div>
-                <hr>
-                <div>
-                    <p><b>Python Developer</b> (2019 - 2024)</p>
-                    <p>Freelance, Nepal</p>
+
+                <!-- Experience Item 6 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>Python Developer</h4>
+                        <span class="exp-date">2019 - 2024</span>
+                    </div>
+                    <p class="exp-company">Freelance, Nepal</p>
                     <ul>
-                        <li>Developed and contributed to several group and solo projects, demonstrating strong Python proficiency.</li>
-                        <li>Created a range of applications including a Library Manager, Password Strength Checker, Pong Game, Blackjack, Tkinter-based Hangman, Tkinter-based Text Editor, Password Generator, Shop Calculator, Speed Typing, and Sudoku solver.</li>
-                        <li>Built a Ticket Generator using PyQt, Pillow, and Sqlite3 libraries, showcasing skills in database handling, image generation, and modern GUI development.</li>
-                        <li>Developed PySnake, a snake game with multiple modes using the PyGame library.</li>
-                        <li>Implemented an image editor with OpenCV and Pillow for image modification and editing.</li>
-                        <li>Created an analog clock using the ttkbootstrap library.</li>
-                        <li>Developed a SQLite-based student record management system.</li>
+                        <li>Developed and contributed to several projects including a Library Manager, Password Strength Checker, Games (Pong, Blackjack, Snake), and a Tkinter Text Editor.</li>
+                        <li>Built a Ticket Generator using PyQt, Pillow, and Sqlite3, showcasing skills in database handling and image generation.</li>
+                        <li>Implemented an image editor with OpenCV and Pillow and a SQLite-based student record management system.</li>
                     </ul>
                 </div>
             </div>
@@ -140,11 +181,18 @@
             <div class="section-title">Projects</div>
             <div class="section-content projects">
                 <ul>
-                    <li><strong>Project-codebeing:</strong> Built a tool to rapidly convert natural language descriptions into executable Python code by using ReactJS for the front-end and back-end managed through API since Vercel deployment supports limited back-end functionalities. Trained a Llama-2 7B model on a custom code/description pairs dataset collected through GitHub Scraping. Successfully demonstrated easy Python code generation using Natural language descriptions during College Majors.</li>
-                    <hr>
-                    <li><strong>Project Hand-Gesture Recognizer:</strong> Building a project that uses OpenCV and a CNN model to convert hand gestures into their respective sign language codes. It can be an effective tool for handicapped people to communicate effectively.</li>
-                    <hr>
-                    <li><strong>Sentiment Analyzer:</strong> Successfully built a sentiment analyzer using the Distilbert-Base model to classify the sentiment of a statement as whether positive or negative. The model achieved a notable accuracy of 89 percent in sentiment analysis tasks for text classification.</li>
+                    <li>
+                        <div class="project-title"><strong>Project-codebeing:</strong></div>
+                        Built a tool to rapidly convert natural language descriptions into executable Python code. Trained a Llama-2 7B model on a custom code/description pairs dataset collected through GitHub Scraping.
+                    </li>
+                    <li>
+                        <div class="project-title"><strong>Project Hand-Gesture Recognizer:</strong></div>
+                        Building a project that uses OpenCV and a CNN model to convert hand gestures into sign language codes. An effective tool for accessibility.
+                    </li>
+                    <li>
+                        <div class="project-title"><strong>Sentiment Analyzer:</strong></div>
+                        Successfully built a sentiment analyzer using the Distilbert-Base model to classify sentiment. The model achieved 89% accuracy in text classification tasks.
+                    </li>
                 </ul>
             </div>
         </div>
@@ -153,12 +201,11 @@
             <div class="section-title">Extra-Curricular Activities</div>
             <div class="section-content extra-curricular">
                 <ul>
-                    <li>I actively write on <a href="https://medium.com/@abhiverse01"><b>medium</b></a> regarding tech and other topics. It is viewed and appreciated by over 1k+ readers per week. I like reading articles, finding out the new in tech, and trying out new technologies and LLMs that hit the HuggingFace library.</li>
-                    <li>Working on my very own GitHub repo titled "how-I-learned-python" and "how-I-learned-ml", to be put out as a one-stop guide and an effective resource for anyone trying to start learning Python, ML and Deep Learning Concepts.</li>
-                    <li>I even volunteered and managed the Deltathon, which is a hackathon conducted every year by ACES in Eastern Regional Campus, TU </li>
-                    <li>After my time as a Volunteer, I even took part in the Deltathon the next year with my team, we were called team ”ZAV”.</li>
-                    <li>I learned a lot through competitive coding and exposure to highly experienced individuals.</li>
-                    <li>I love trying to put out the ideas in my mind to physical shape, whether it be through code, sketches, rough drawings, idea-logs that I make, etc.. </li>
+                    <li>I actively write on <a href="https://medium.com/@abhiverse01" target="_blank"><b>Medium</b></a> regarding tech topics, viewed by over 1k+ readers per week.</li>
+                    <li>Working on my GitHub repos "how-I-learned-python" and "how-I-learned-ml" as guides for beginners.</li>
+                    <li>Volunteered and managed Deltathon (hackathon) conducted by ACES, Eastern Regional Campus, TU.</li>
+                    <li>Participated in Deltathon with team "ZAV".</li>
+                    <li>I love trying to put out ideas into physical shape, whether through code, sketches, or idea-logs.</li>
                 </ul>
             </div>
         </div>
@@ -167,7 +214,7 @@
             <div class="section-title">Leadership</div>
             <div class="section-content leadership">
                 <ul>
-                    <li>I was the team leader for my college major project, "Project-codeBeing". I handled the model training, deployment, and backend. I also worked on Reactjs with my team members, since they were not very experienced. We successfully demonstrated our project in front of the Jury and received great reviews and possible improvements for the future.</li>
+                    <li>Team leader for the college major project "Project-codeBeing". Handled model training, deployment, backend, and Reactjs guidance. Successfully demonstrated the project to the Jury.</li>
                 </ul>
             </div>
         </div>

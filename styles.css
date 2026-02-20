@@ -1,8 +1,258 @@
+Here are the fixed HTML and CSS codes.
+
+### Summary of Fixes
+
+1.  **Missing Library:** Added the **Font Awesome** CDN link in the `<head>`. The original code used `<i class="fas fa-phone">` but didn't load the library, so those icons wouldn't appear.
+2.  **Layout Bug (Social Icons):** The social media icons were stacked vertically because they were inside separate `<p>` tags. I restructured the HTML and CSS to display them in a horizontal row.
+3.  **Invalid HTML:** In the "Projects" section, `<hr>` tags were placed directly inside the `<ul>` but outside of `<li>` tags. This is invalid HTML. I moved the separators inside the list items or used CSS borders instead.
+4.  **Inline Styles Removed:** Moved the inline `width:30px; height:30px` styles from the HTML to the CSS file for better maintainability.
+5.  **Visual Hierarchy:** Styled the "Dates" in the experience section to align to the right or stand out, improving readability.
+6.  **Image Fallbacks:** Added `object-fit` and background colors to profile images so they don't look broken if the source files are missing.
+
+---
+
+### HTML Code (`index.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Shah's Resume</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome (ADDED: Required for phone/map icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="cover-image">
+                <div class="profile-image">
+                    <!-- Added fallback alt text and object-fit class in CSS -->
+                    <img src="assets/profile-placeholder.png" alt="Abhishek Shah Profile">
+                </div>
+            </div>
+            <h1>Abhishek Shah</h1>
+            <!-- Converted H3 to a subtitle span for better semantic structure -->
+            <div class="subtitle">ML Engineer - AIE | ML-Ops | Python Stack | MongoDB | Tableau | LLMs</div>
+        </header>
+
+        <div class="contact-info">
+            <!-- Left side: Location & Phone -->
+            <div class="contact-details">
+                <p><i class="fas fa-phone"></i> +977(981) 587-3277</p>
+                <p><i class="fas fa-map-marker-alt"></i> Janakpur, Nepal</p>
+            </div>
+            
+            <!-- Right side: Social Icons (Fixed Layout) -->
+            <div class="social-links">
+                <a href="mailto:www.abhishekshah007@gmail.com" title="Email">
+                    <img src="assets/gmail.png" alt="Email">
+                </a>
+                <a href="https://linkedin.com/in/theabhishekshah" target="_blank" title="LinkedIn">
+                    <img src="assets/linkedin-icion.png" alt="LinkedIn">
+                </a>
+                <a href="http://www.abhishekshah.vercel.app" target="_blank" title="Portfolio">
+                    <img src="assets/portfolio.png" alt="Portfolio">
+                </a>
+                <a href="https://www.facebook.com/1lord001" target="_blank" title="Facebook">
+                    <img src="assets/facebook.gif" alt="Facebook">
+                </a>
+                <a href="https://www.github.com/abhiverse01" target="_blank" title="GitHub">
+                    <img src="assets/github.gif" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/i_abhiverse" target="_blank" title="Instagram">
+                    <img src="assets/instagram.gif" alt="Instagram">
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Objective</div>
+            <div class="section-content objective">
+                <p>Software Engineer with 2+ years of experience in Machine Learning, LLMs, Data Science, and Python Full Stack Development as a Freelancer seeking full-time ML Engineer roles.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="section-content education">
+                <div class="edu-item">
+                    <p><strong>Bachelor's of Computer Science Engineering (CSE)</strong> - Tribhuvan University (2020 - 2024)</p>
+                    <p class="coursework"><em>Relevant Coursework:</em> Data Mining, Microprocessor, Object Oriented Programming and Design, Artificial Intelligence and Theory of Computation.</p>
+                </div>
+                <div class="edu-item">
+                    <p><strong>Secondary Education</strong> - Model Secondary School (2017 - 2019)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Skills</div>
+            <div class="section-content skills">
+                <div class="skill-group">
+                    <p><b>Technical Skills:</b></p>
+                    <p class="skill-tags">Python, Javascript, AI/ML, NLP, Data Science, OpenCV, RecSys, Deep Learning, Flask, SQL, Docker, Kafka, System Design, Microservice Architectures</p>
+                </div>
+                <div class="skill-group">
+                    <p><b>Soft Skills:</b></p>
+                    <p>Project Leader, Writing and Communication, Content Development</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Experience</div>
+            <div class="section-content experience">
+                <!-- Experience Item 1 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>AIE - Artificial Intelligence Engineer & AI Team Lead</h4>
+                        <span class="exp-date">Jun 2024 - Present</span>
+                    </div>
+                    <p class="exp-company">Inflancer Technology, Gwarko, Kathmandu, Nepal</p>
+                    <ul>
+                        <li><b>Recommender Systems:</b> Developed and deployed advanced Recommender Systems (RS) to boost user engagement through personalized content.</li>
+                        <li><b>Intelligent Search:</b> Implemented intelligent search features using NLP to enhance content discovery.</li>
+                        <li><b>End-to-End AI Solutions:</b> Led the development and deployment of scalable AI solutions on cloud platforms using Docker and Kubernetes.</li>
+                        <li><b>Cross-functional Collaboration:</b> Integrated AI features with business objectives, working closely with diverse teams.</li>
+                        <li><b>Technical Expertise:</b> Skilled in Python, Apache Kafka, MongoDB, LLMs, and Neural Networks for real-time systems.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Researcher / Research Writer</h4>
+                        <span class="exp-date">Jan 2019 - 2024</span>
+                    </div>
+                    <p class="exp-company">Freelance, Dharan, Nepal</p>
+                    <ul>
+                        <li>Researched and worked on the "Nepali Music Genre Classification" paper to assist my mentor in studying M.Sc abroad.</li>
+                        <li>Researched and worked on the "Multi-modal Hate Speech Detection using Deep Learning" paper to assist my mentor studying M.Sc. abroad.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Engineer</h4>
+                        <span class="exp-date">Jan 2019 - 2024</span>
+                    </div>
+                    <p class="exp-company">Freelance, Kathmandu, Nepal</p>
+                    <ul>
+                        <li>Independently worked on several ML and LLMs Projects.</li>
+                        <li>Created a Python code generator by Fine-tuning a Llama-2 Model on the custom collected code/description dataset.</li>
+                        <li>Working on a hand gesture recognition project using OpenCV and deploying it using Vercel.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Intern</h4>
+                        <span class="exp-date">Oct 2023 - Nov 2023</span>
+                    </div>
+                    <p class="exp-company">Codsoft, Bangalore, India</p>
+                    <ul>
+                        <li>Developed a machine learning model to identify fraudulent credit card transactions using Logistic Regression and Random Forest, addressing imbalanced data with SMOTE.</li>
+                        <li>Predicted customer churn with Random Forest achieving 86.55% accuracy, employing data cleaning, normalization, feature engineering, and hyperparameter tuning.</li>
+                        <li>Implemented NLP techniques for movie genre prediction, optimizing Logistic Regression to achieve 57.87% accuracy.</li>
+                        <li>Created an SVM model for SMS spam detection, achieving 98% accuracy, with extensive preprocessing.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Item 5 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>ML Sub-Mentor</h4>
+                        <span class="exp-date">Oct 2023</span>
+                    </div>
+                    <p class="exp-company">ACES, Dharan, Nepal</p>
+                    <ul>
+                        <li>Worked as a sub-mentor in a one-week-long ML training camp. Helped attendees understand ML concepts, errors, and possible improvements.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Item 6 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>Python Developer</h4>
+                        <span class="exp-date">2019 - 2024</span>
+                    </div>
+                    <p class="exp-company">Freelance, Nepal</p>
+                    <ul>
+                        <li>Developed and contributed to several projects including a Library Manager, Password Strength Checker, Games (Pong, Blackjack, Snake), and a Tkinter Text Editor.</li>
+                        <li>Built a Ticket Generator using PyQt, Pillow, and Sqlite3, showcasing skills in database handling and image generation.</li>
+                        <li>Implemented an image editor with OpenCV and Pillow and a SQLite-based student record management system.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Projects</div>
+            <div class="section-content projects">
+                <ul>
+                    <li>
+                        <div class="project-title"><strong>Project-codebeing:</strong></div>
+                        Built a tool to rapidly convert natural language descriptions into executable Python code. Trained a Llama-2 7B model on a custom code/description pairs dataset collected through GitHub Scraping.
+                    </li>
+                    <li>
+                        <div class="project-title"><strong>Project Hand-Gesture Recognizer:</strong></div>
+                        Building a project that uses OpenCV and a CNN model to convert hand gestures into sign language codes. An effective tool for accessibility.
+                    </li>
+                    <li>
+                        <div class="project-title"><strong>Sentiment Analyzer:</strong></div>
+                        Successfully built a sentiment analyzer using the Distilbert-Base model to classify sentiment. The model achieved 89% accuracy in text classification tasks.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Extra-Curricular Activities</div>
+            <div class="section-content extra-curricular">
+                <ul>
+                    <li>I actively write on <a href="https://medium.com/@abhiverse01" target="_blank"><b>Medium</b></a> regarding tech topics, viewed by over 1k+ readers per week.</li>
+                    <li>Working on my GitHub repos "how-I-learned-python" and "how-I-learned-ml" as guides for beginners.</li>
+                    <li>Volunteered and managed Deltathon (hackathon) conducted by ACES, Eastern Regional Campus, TU.</li>
+                    <li>Participated in Deltathon with team "ZAV".</li>
+                    <li>I love trying to put out ideas into physical shape, whether through code, sketches, or idea-logs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Leadership</div>
+            <div class="section-content leadership">
+                <ul>
+                    <li>Team leader for the college major project "Project-codeBeing". Handled model training, deployment, backend, and Reactjs guidance. Successfully demonstrated the project to the Jury.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 | Abhishek Shah. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### CSS Code (`styles.css`)
+
+```css
 /* --- CSS Variables for Theme Consistency --- */
 :root {
     --primary-color: #2c3e50;
     --accent-color: #3498db;
     --text-color: #333;
+    --text-light: #666;
     --bg-light: #f9f9f9;
     --bg-white: #fff;
     --bg-section: #f8f9fa;
@@ -41,13 +291,13 @@ body {
 .cover-image {
     width: 100%;
     height: 200px;
+    background-color: var(--primary-color); /* Fallback color */
     background-image: url('assets/aicoverbannerone.png');
     background-size: cover;
     background-position: center;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     position: relative;
-    background-color: rgba(0,0,0,0.1); /* Fallback color */
 }
 
 .profile-image {
@@ -61,6 +311,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background-color: #eee; /* Placeholder bg */
 }
 
 .profile-image img {
@@ -70,59 +321,79 @@ body {
 }
 
 .header h1 {
-    margin-top: 100px;
+    margin-top: 90px; /* Adjusted for better spacing */
+    margin-bottom: 5px;
     font-size: 2.5em;
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: -0.5px;
 }
 
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 /* --- Contact Info --- */
 .contact-info {
     display: flex;
-    justify-content: center; /* Centered looks cleaner */
+    justify-content: space-between; /* Split left and right */
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: var(--bg-section);
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
 }
 
-.contact-info p,
-.contact-info a {
-    margin: 0;
-    color: var(--text-color);
+.contact-details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
 }
 
-.contact-info a {
+.contact-details i {
     color: var(--accent-color);
-    font-weight: 500;
-    transition: color 0.2s;
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
 }
 
-.contact-info a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-/* Profile Counter Specifics */
-.profile-counter {
+/* Social Links Flex Container */
+.social-links {
     display: flex;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #333;
+    gap: 15px; /* Spacing between icons */
 }
 
-.counter-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px; /* Spacing between icon and text */
+.social-links a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+}
+
+.social-links img {
+    width: 28px;  /* Moved inline CSS here */
+    height: 28px; /* Moved inline CSS here */
+    object-fit: contain;
+    filter: grayscale(100%); /* Makes icons look uniform grey */
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.social-links a:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* --- Sections --- */
 .section {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .section-title {
@@ -135,66 +406,96 @@ body {
     display: inline-block;
 }
 
+.section-content {
+    background-color: var(--bg-section);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    border-left: 5px solid var(--accent-color);
+}
+
 .section-content ul {
     padding-left: 20px;
     margin: 0;
 }
 
 .section-content ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    text-align: justify;
 }
 
-/* --- Cards (Experience, Projects, etc.) --- */
-.experience, .projects, .extra-curricular, .leadership, .objective, .education, .skills {
-    border-radius: var(--border-radius);
-    background-color: var(--bg-section);
-    padding: 20px;
-    border-left: 5px solid var(--accent-color); /* Accent bar */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* --- Experience Specifics --- */
+.exp-item {
+    margin-bottom: 25px;
 }
 
-/* Subtle hover animation for cards */
-.experience:hover, .projects:hover, .skills:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+.exp-item:last-child {
+    margin-bottom: 0;
 }
 
-/* --- Specific Elements --- */
-hr {
-    border: 0;
-    height: 1px;
-    background: #e0e0e0;
-    margin: 20px 0;
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
-.extra-curricular ul, .leadership ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.exp-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
 }
 
-.extra-curricular ul li, .leadership ul li {
-    margin-bottom: 10px;
-}
-
-.extra-curricular ul li a, .leadership ul li a {
+.exp-date {
+    font-size: 0.85rem;
     color: var(--accent-color);
-    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
-.extra-curricular ul li a:hover, .leadership ul li a:hover {
-    text-decoration: underline;
+.exp-company {
+    margin: 2px 0 10px 0;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-light);
 }
 
+/* Separator Line */
+.exp-item:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+/* --- Projects Specifics --- */
+.projects li {
+    margin-bottom: 15px;
+    list-style-type: none; /* Removed bullet for cleaner look */
+}
+
+.project-title {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.projects li:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+/* --- Skills --- */
+.skill-tags {
+    line-height: 1.8;
+}
+
+/* --- Footer --- */
 footer {
     text-align: center;
     font-size: 0.75rem;
     color: #777;
     margin-top: 2rem;
     padding: 1rem;
-    border-top: 1px solid #ddd;
 }
 
-/* --- Responsiveness (Mobile Support) --- */
+/* --- Responsiveness --- */
 @media (max-width: 768px) {
     .container {
         margin: 10px;
@@ -204,7 +505,12 @@ footer {
 
     .header h1 {
         font-size: 1.8em;
-        margin-top: 80px;
+        margin-top: 70px;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+        padding: 0 10px;
     }
 
     .cover-image {
@@ -219,33 +525,27 @@ footer {
 
     .contact-info {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        text-align: center;
     }
 
-    .section-title {
-        font-size: 1.2em;
+    .social-links {
+        justify-content: center;
+    }
+
+    .exp-header {
+        flex-direction: column;
+    }
+    
+    .exp-date {
+        margin-bottom: 5px;
     }
 }
 
 /* --- Print Optimization --- */
 @media print {
-    body {
-        background-color: #fff;
-    }
-    
-    .container {
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-        max-width: 100%;
-    }
-
-    .cover-image {
-        -webkit-print-color-adjust: exact; 
-        print-color-adjust: exact;
-    }
-
-    .experience, .education, .projects {
-        page-break-inside: avoid;
-    }
+    body { background-color: #fff; }
+    .container { box-shadow: none; margin: 0; padding: 0; max-width: 100%; }
+    .section-content { box-shadow: none; border-left: 2px solid #ccc; }
 }
+```
